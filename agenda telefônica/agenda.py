@@ -9,7 +9,6 @@ def menu():
 =============
     MENU
 =============
-
 Digite o número da opção que deseja realizar com os contatos:
 (1) Cadastrar novo contato
 (2) Localizar contato
@@ -44,7 +43,7 @@ def contatos(lista: list) -> list:
     ctt.telefone = int(input('TELEFONE\n'))
     ctt.idade = int(input('IDADE\n'))
     lista.append(ctt)
-  return lista
+    return lista
 
 
 def localizar(lista: list) -> None:
