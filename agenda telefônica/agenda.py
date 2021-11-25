@@ -38,8 +38,7 @@ def opcoes(N, lista):
     return lista
 
 
-def contatos(lista) -> list:
-  if len(lista) <= 10:
+def contatos(lista: list) -> list:
     ctt = Contato()
     ctt.nome = input('NOME\n')
     ctt.telefone = int(input('TELEFONE\n'))
@@ -48,19 +47,17 @@ def contatos(lista) -> list:
   return lista
 
 
-def localizar(lista):
+def localizar(lista: list) -> None:
   L = input('Digite o nome do contato\n')
-  tam = len(lista)
-  for i in range(tam):
+  for i in range(len(lista)):
     if L == lista[i].nome:
       print(f'\nTelefone: {lista[i].telefone}\nIdade: {lista[i].idade}')
 
 
-def alterar(lista):
+def alterar(lista: list) -> list:
   L = input('\nDigite o nome do contato\n')
   D = int(input('\nQual informação deseja alterar?\n(1) Nome\n(2) Telefone\n(3) Idade\n'))
-  tam = len(lista)
-  for i in range(tam):
+  for i in range(len(lista)):
     if L == lista[i].nome:
       if D == 1:
         lista[i].nome = input('\nDigite o novo nome\n')
@@ -68,14 +65,13 @@ def alterar(lista):
         lista[i].telefone = int(input('\nDigite o novo telefone\n'))
       elif D == 3:
         lista[i].idade = int(input('\nDigite a nova idade\n'))
-    break
+      break
   return lista
 
 
-def excluir(lista):
+def excluir(lista: list) -> list:
   N = input('\nInforme o nome do contato que deseja excluir\n')
-  tam = len(lista)
-  for i in range(tam):
+  for i in range(Len(lista)):
     if lista[i].nome == N:
       del lista[i]
       break
@@ -90,8 +86,7 @@ def mostrar(lista: list) -> None:
     print('IDADE:', lista[i].idade)
     print()
 
-   
-tamanho = 1
+
 lista_contatos = []
 while True:
   N = menu()
