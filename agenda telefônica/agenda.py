@@ -70,7 +70,7 @@ def alterar(lista: list) -> list:
 
 def excluir(lista: list) -> list:
   N = input('\nInforme o nome do contato que deseja excluir\n')
-  for i in range(Len(lista)):
+  for i in range(len(lista)):
     if lista[i].nome == N:
       del lista[i]
       break
@@ -78,8 +78,7 @@ def excluir(lista: list) -> list:
 
 
 def mostrar(lista: list) -> None:
-  tam = len(lista)
-  for i in range(tam):
+  for i in range(len(lista)):
     print('NOME:', lista[i].nome)
     print('TELEFONE:', lista[i].telefone)
     print('IDADE:', lista[i].idade)
