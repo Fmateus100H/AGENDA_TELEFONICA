@@ -99,9 +99,9 @@ def ler_arquivo(nome_arquivo: str) -> list:
     C = Contato()
     linha = linha.replace('\n', '')
     posicao = linha.split('##')
-    C.nome = linha[0]
-    C.telefone = linha[1]
-    C.adicional = linha[2]
+    C.nome = posicao[0]
+    C.telefone = posicao[1]
+    C.adicional = posicao[2]
     lista.append(C)
   arquivo.close()
   return lista
